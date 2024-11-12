@@ -32,7 +32,7 @@ class CentrifugaController extends Controller
 
         $response = Http::withHeaders([
             'Authorization' => 'apikey YOUR_API_KEY',
-        ])->post('http://localhost:8000/api', $data);
+        ])->post('http://localhost:8001/api', $data);
 
         return response()->noContent();
 
