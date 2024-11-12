@@ -9,11 +9,12 @@ class CentrifugaController extends Controller
 {
     public function sendMessage(Request $request)
     {
-        $message = $request->input('message');
-        $channel = $request->input('chat_channel');
-        $name = $request->input('name');
-        $email = $request->input('email');
-        $userId = $request->input('userId');
+
+        $message = $request->json('message');
+        $channel = $request->json('chat_channel');
+        $name = $request->json('name');
+        $email = $request->json('email');
+        $userId = $request->json('userId');
 
         $data = [
             'method' => 'publish',
